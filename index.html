@@ -1,82 +1,162 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
-<title> Federico Reyes Gomez </title>
+<head>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body style=" font-family: Arial,Helvetica,sans-serif">
+  <script src="js/functions.js"></script>
 
-<div style="text-align:center">
+  <!-- Main CSS -->
+  <link href='css/main.css' rel='stylesheet'>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<h1> Federico Jose Reyes Gomez </h1>
+  <title> Federico Reyes Gomez </title>
+</head>
 
-<p id= 'description'> This is my personal webpage. </p>
 
-<p>
-	<img onmouseout = 'changeImage()' id = 'profilePicture' src = 'images/stanford_profile_picture.jpg' alt = "Federico Reyes Gomez" style = "width:300px">
-</p>
 
-<p id= 'demo'> On here, you can find links to my projects and social media accounts </p>
+<body>
+  <div style="text-align:center">
 
-<script>
-var mainPath = "https://web.stanford.edu/~frg100/";
+    <nav id="navbar">
+      <button class="button" id="about-section-button">ABOUT</button>
+      <button class="button" id="social-media-section-button">SOCIAL MEDIA</button>
+      <button class="button" id="research-section-button">RESEARCH</button>
+      <button class="button" id="open-source-section-button">OPEN SOURCE</button>
+    </nav>
 
-function changeImage(){
-    if(document.getElementById('profilePicture').src == mainPath + 'images/stanford_profile_picture.jpg'){
-        document.getElementById('profilePicture').src = mainPath + 'images/facebook_profile_picture.jpg';
-    }else if(document.getElementById('profilePicture').src == mainPath + 'images/facebook_profile_picture.jpg'){
-        document.getElementById('profilePicture').src = mainPath + 'images/stanford_profile_picture.jpg';
-    }
-}
-</script>
 
-<h2> Social Media </h2>
+    <!-- About Section -->
+    <section id='about-section'>
+      <h1> Federico Jose Reyes Gomez </h1>
+      <p id= 'description'> This is my personal webpage. </p>
+      <p>
+      	<img onmouseout='changeImage()' class="profile-picture" id='profilePicture' src='images/stanford_profile_picture.jpg' alt="Federico Reyes Gomez">
+      </p>
+      <p id= 'demo'> On here, you can find links to my projects and social media accounts </p>
+    </section>
 
-<p id= 'social_media_links'>
 
-For my personal and professional social media sites, you can access my <a href = "https://www.facebook.com/freyesgomez100">Facebook</a> account, my <a href = "https://www.linkedin.com/in/federico-reyes-gomez/"> LinkedIn </a> profile, as well as my <a href = "https://github.com/frg100"> GitHub </a> repos. 
-</br> 
-</br>
-For my music as <b> PICO </b> check out my <a href="https://frg100.wixsite.com/pico"> personal music website </a> as well as my Spotify page below: 
-</br> 
-</br>
-<iframe src="https://open.spotify.com/embed/artist/23LgqLUe1nJNF0Ciaco5aj" width="900" height="380" frameborder="0" allowtransparency="true"></iframe>
-</br> 
-</br> 
-as well as my SoundCloud page below: 
-</br> 
-</br>
-<iframe width="900" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/77645222&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+    <!-- Social Media Section -->
+    <section id='social-media-section'>
+      <h2> Social Media </h2>
+      <p id= 'social_media_links'>
+        For my personal and professional social media sites, you can access my <a href = "https://www.facebook.com/freyesgomez100">Facebook</a> account, my <a href = "https://www.linkedin.com/in/federico-reyes-gomez/"> LinkedIn </a> profile, as well as my <a href = "https://github.com/frg100"> GitHub </a> repos. 
+        </br> 
+        </br>
+        For my music as <b> PICO </b> check out my <a href="https://frg100.wixsite.com/pico"> personal music website </a> as well as my Spotify page below: 
+        </br> 
+        </br>
+        <iframe src="https://open.spotify.com/embed/artist/23LgqLUe1nJNF0Ciaco5aj" width="900" height="380" frameborder="0" allowtransparency="true"></iframe>
+        </br> 
+        </br> 
+        as well as my SoundCloud page below: 
+        </br> 
+        </br>
+        <iframe width="900" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/77645222&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      </p>
+    </section>
 
-</p>
 
-<h2> Research </h2>
+    <!-- Research Section -->
+    <section id='research-section'>
+      <h2> Research </h2>
+      <p id='publications'>
+        Additionally, you can find my original research paper entitled <a href = "https://github.com/frg100/Design_secure_symmetric_key_block_encryption_algorithm_reversible_partitioning_cellular_automata/blob/master/Design%20of%20a%20secure%20symmetric%20key%20block%20encryption%20algorithm%20using%20reversible%20partitioning%20cellular%20automata.pdf"> Design of a Secure Symmetric Key Encryption Algorithm Using Reversible Partitioning Cellular Automata </a>.
+      </p>
+    </section>
 
-<p id='publications'>
 
-Additionally, you can find my original research paper entitled <a href = "https://github.com/frg100/Design_secure_symmetric_key_block_encryption_algorithm_reversible_partitioning_cellular_automata/blob/master/Design%20of%20a%20secure%20symmetric%20key%20block%20encryption%20algorithm%20using%20reversible%20partitioning%20cellular%20automata.pdf"> Design of a Secure Symmetric Key Encryption Algorithm Using Reversible Partitioning Cellular Automata </a>.
+    <!-- Open Source Section -->
+    <section id='open-source-section'>
+      <h2> Open Source </h2>
+      <p id = 'openSource'>
+        You can find my open-source Python module <a href = "https://pypi.python.org/pypi/block_ca/1.6">"block_ca"</a> on the PyPI website. <br> 
+        It is a module to run 2D partitioning cellular automata that use the Margolus neighborhood. <br>
+        This flavor of cellular automata is reversible as long as the rule is bijective, leading to lots of cool applications.
+      </p>
+    </section>
 
-</p>
 
-<h2> Open Source </h2>
-
-<p id = 'openSource'>
-
-You can find my open-source Python module <a href = "https://pypi.python.org/pypi/block_ca/1.6">"block_ca"</a> on the PyPI website. <br> 
-It is a module to run 2D partitioning cellular automata that use the Margolus neighborhood. <br>
-This flavor of cellular automata is reversible as long as the rule is bijective, leading to lots of cool applications.
-
-</p>
-
-<h2> Contact </h2>
-
-<p id = 'contact_info'>
-
-If you would like to contact me, you can reach me at <i> frg100 </i>at<i> stanford.edu</i>
-
-</p>
-
-</div>
-
+    <!-- Contact Section -->
+    <section id='contact-section'>
+      <h2> Contact </h2>
+      <p id = 'contact_info'>
+        If you would like to contact me, you can reach me at <i> frg100 </i>at<i> stanford.edu</i>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        </br>
+        </br> 
+        Quote of the day
+        </br>
+        </br> 
+        </br>
+        “If, in all that you wish to do, you begin by asking yourself: am I certain that I would wish to do this an infinite number of times? This should be for you the most solid centre of gravity . . . My doctrine says, the task is to live your life in such a way that you must wish to live it again - for you will anyway! If striving gives you the highest feeling, then strive! If rest gives you the highest feeling, then rest! If fitting in, following and obeying give you the highest feeling, then obey! Only make sure you come to know what gives you the highest feeling, and then spare no means. Eternity is at stake! This doctrine is mild in its treatment of those who do not believe in it. It has neither hell nor threats. But anyone who does not believe merely lives a fugitive life in the consciousness of it.” - Friedrich Nietzsche
+      </p>
+    </section>
+  </div>
 </body>
+
+<!-- Custom Scripts -->
+<script src="js/eventListeners.js"></script>
+
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </html>
