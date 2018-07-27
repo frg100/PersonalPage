@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<title> Federico Reyes Gomez </title>
+
+<body style=" font-family: Arial,Helvetica,sans-serif">
+
+<div style="text-align:center">
+
+<h1> Federico Jose Reyes Gomez </h1>
+
+<p id= 'description'> This is my personal webpage. </p>
+
+<p>
+	<img onmouseout = 'changeImage()' id = 'profilePicture' src = 'images/stanford_profile_picture.jpg' alt = "Federico Reyes Gomez" style = "width:300px">
+</p>
+
+<p id= 'demo'> On here, you can find links to my projects and social media accounts </p>
+
+<script>
+var mainPath = "https://web.stanford.edu/~frg100/";
+
+function changeImage(){
+    if(document.getElementById('profilePicture').src == mainPath + 'images/stanford_profile_picture.jpg'){
+        document.getElementById('profilePicture').src = mainPath + 'images/facebook_profile_picture.jpg';
+    }else if(document.getElementById('profilePicture').src == mainPath + 'images/facebook_profile_picture.jpg'){
+        document.getElementById('profilePicture').src = mainPath + 'images/stanford_profile_picture.jpg';
+    }
+}
+</script>
+
+<h2> Social Media </h2>
+
+<p id= 'social_media_links'>
+
+For my personal and professional social media sites, you can access my <a href = "https://www.facebook.com/freyesgomez100">Facebook</a> account, my <a href = "https://www.linkedin.com/in/federico-reyes-gomez/"> LinkedIn </a> profile, as well as my <a href = "https://github.com/frg100"> GitHub </a> repos. 
+</br> 
+</br>
+For my music as <b> PICO </b> check out my <a href="https://frg100.wixsite.com/pico"> personal music website </a> as well as my Spotify page below: 
+</br> 
+</br>
+<iframe src="https://open.spotify.com/embed/artist/23LgqLUe1nJNF0Ciaco5aj" width="900" height="380" frameborder="0" allowtransparency="true"></iframe>
+</br> 
+</br> 
+as well as my SoundCloud page below: 
+</br> 
+</br>
+<iframe width="900" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/77645222&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+
+</p>
+
+<h2> Research </h2>
+
+<p id='publications'>
+
+Additionally, you can find my original research paper entitled <a href = "https://github.com/frg100/Design_secure_symmetric_key_block_encryption_algorithm_reversible_partitioning_cellular_automata/blob/master/Design%20of%20a%20secure%20symmetric%20key%20block%20encryption%20algorithm%20using%20reversible%20partitioning%20cellular%20automata.pdf"> Design of a Secure Symmetric Key Encryption Algorithm Using Reversible Partitioning Cellular Automata </a>.
+
+</p>
+
+<h2> Open Source </h2>
+
+<p id = 'openSource'>
+
+You can find my open-source Python module <a href = "https://pypi.python.org/pypi/block_ca/1.6">"block_ca"</a> on the PyPI website. <br> 
+It is a module to run 2D partitioning cellular automata that use the Margolus neighborhood. <br>
+This flavor of cellular automata is reversible as long as the rule is bijective, leading to lots of cool applications.
+
+</p>
+
+<h2> Contact </h2>
+
+<p id = 'contact_info'>
+
+If you would like to contact me, you can reach me at <i> frg100 </i>at<i> stanford.edu</i>
+
+</p>
+
+</div>
+
+</body>
+</html>
