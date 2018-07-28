@@ -11,7 +11,7 @@ function scrollToElement(elementId){
 }
 
 // Variables
-const sectionIds = ['about-section', 'social-media-section', 'research-section', 'open-source-section'];
+const sectionIds = ['about-section', 'social-media-section', 'research-section', 'open-source-section', 'contact-section'];
 
 // Event Listeners
 sectionIds.forEach( (sectionId) => {
