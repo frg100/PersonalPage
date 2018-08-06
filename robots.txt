@@ -1,0 +1,4 @@
+User-agent: *
+
+Sitemap: https://web.stanford.edu/~frg100/sitemap.xml
+Disallow: /demos
