@@ -24,5 +24,4 @@ function randomPosition(ids){
   });
 }
 
-
 setInterval(randomPosition, 3000, essayIds);
