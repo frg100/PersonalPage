@@ -1,0 +1,14 @@
+h1 {
+  text-align: center;
+  padding: 3rem;
+}
+
+li,
+p {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+div > * {
+  padding-left: 5rem;
+}
