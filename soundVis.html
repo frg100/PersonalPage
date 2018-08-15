@@ -25,19 +25,12 @@
     }
 
     var hash_value = window.location.hash.replace('#', '');
+    const regexMatch = window.location.hash.match(/=.*&token/g)[0];
+    const accessToken = regexMatch.substring(1, regexMatch.length-6);
  
-     //show the value with an alert pop-up
-     console.log(`hash_value: ${hash_value}`);
+    //show the value with an alert pop-up
+    alert(`accessToken: ${accessToken}`);
 
-     const regexMatch = window.location.hash.match(/=.*&token/g);
-
-
-     console.log(`regexMatch: ${regexMatch}`);
-     console.log(`regexMatch[0]: ${regexMatch[0]}`);
-     console.log(`regexMatch[0].substring(1, regexMatch.length-6): ${regexMatch[0].substring(1, regexMatch[0].length-6)}`);
-
-     // document.getElementById('access-token-paragraph').innerHTML = 
-    
   </script>
 
   <title> SoundVis </title>
@@ -47,7 +40,6 @@
   <div class="login">
     <h1>First, log in to spotify</h1>
     <button class="btn btn-primary" onclick='authenticate()'>Log in</button>
-    <p id="access-token-paragraph">Access Token: #invalid</p>
   </div>
 </body>
 </html>
