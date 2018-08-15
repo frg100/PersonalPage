@@ -25,15 +25,14 @@
     }
 
     window.addEventListener("message", function(event) {
-        console.log(event.data);
-        var hash = JSON.parse(event.data);
-        if (hash.type == 'access_token') {
-            console.log(hash.access_token);
+      console.log(event.data);
+      var hash = JSON.parse(event.data);
+      if (hash.type == 'access_token') {
+          console.log(hash.access_token);
       }
     }, false);
     
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
 
   <title> SoundVis </title>
 </head>
