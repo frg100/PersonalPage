@@ -27,14 +27,14 @@
     var hash_value = window.location.hash.replace('#', '');
  
      //show the value with an alert pop-up
-     console.log(hash_value);
+     console.log(`hash_value: ${hash_value}`);
 
      const regexMatch = window.location.hash.match(/=.*&token/g);
 
 
-     console.log(regexMatch);
-     console.log(regexMatch[0]);
-     console.log(regexMatch[0].substring(1, regexMatch.length-6));
+     console.log(`regexMatch: ${regexMatch}`);
+     console.log(`regexMatch[0]: ${regexMatch[0]}`);
+     console.log(`regexMatch[0].substring(1, regexMatch.length-6): ${regexMatch[0].substring(1, regexMatch[0].length-6)}`);
 
      // document.getElementById('access-token-paragraph').innerHTML = 
     
