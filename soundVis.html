@@ -21,16 +21,23 @@
       const scopes = "user-read-private%20user-read-email";
       const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}&response_type=token&state=123`;
       console.log(authUrl);
-      window.open(authUrl);
+      window.location.replace(authUrl);
     }
 
-    window.addEventListener("message", function(event) {
-      console.log(event.data);
-      var hash = JSON.parse(event.data);
-      if (hash.type == 'access_token') {
-          console.log(hash.access_token);
-      }
-    }, false);
+    var hash_value = window.location.hash.replace('#', '');
+ 
+     //show the value with an alert pop-up
+     console.log(hash_value);
+
+     const regexMatch = window.location.hash.match(/=.*&token/g);
+
+
+     console.log(regexMatch);
+     console.log(regexMatch[1]);
+     console.log(regexMatch.substring(1, regexMatch.length-6));
+     console.log(regexMatch[1].substring(1, regexMatch.length-6));
+
+     // document.getElementById('access-token-paragraph').innerHTML = 
     
   </script>
 
@@ -41,6 +48,7 @@
   <div class="login">
     <h1>First, log in to spotify</h1>
     <button class="btn btn-primary" onclick='authenticate()'>Log in</button>
+    <p id="access-token-paragraph">Access Token: #invalid</p>
   </div>
 </body>
 </html>
