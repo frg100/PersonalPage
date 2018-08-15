@@ -14,19 +14,24 @@
 
   <!-- Scripts -->
   <script>
-    console.log("Authenticating...");
-    const clientId = "689648aff5394a4b8eee2c43fd508311";
-    const redirectUri = "https%3A%2F%2Fweb.stanford.edu%2F~frg100%2FsoundVis";
-    const scopes = "user-read-private%20user-read-email";
-    const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}&response_type=token`;
-    console.log(authUrl);
-    window.open(authUrl);
+    function authenticate(){
+      console.log("Authenticating...");
+      const clientId = "689648aff5394a4b8eee2c43fd508311";
+      const redirectUri = "https:%2F%2Fweb.stanford.edu%2F~frg100%2FsoundVis";
+      const scopes = "user-read-private%20user-read-email";
+      const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes}&response_type=token&state=123`;
+      console.log(authUrl);
+      window.open(authUrl);
+    }
+
     window.addEventListener("message", function(event) {
-      var hash = JSON.parse(event.data);
-      if (hash.type == 'access_token') {
-          console.log(hash.access_token);
+        console.log(event.data);
+        var hash = JSON.parse(event.data);
+        if (hash.type == 'access_token') {
+            console.log(hash.access_token);
       }
     }, false);
+    
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
 
@@ -36,11 +41,11 @@
 
 <body>
  <div>
-    <div id="login">
+    <div class="login">
      <h1>First, log in to spotify</h1>
-     <a href="/login">Log in</a>
+     <button class="btn btn-primary" onclick=authenticate>Log in</button>
     </div>
-    <div id="loggedin">
+    <div class="logged-in">
     </div>
  </div>
 
